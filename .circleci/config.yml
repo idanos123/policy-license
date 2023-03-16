@@ -9,7 +9,7 @@ jobs:
       - checkout
       - node/install-packages
       - license-checker/validate:
-          forbidden: "MIT; GPL;"
+          forbidden: "GPL;"
 workflows:
   test:
     jobs:
