@@ -1,0 +1,16 @@
+version: '2.1'
+orbs:
+  license-checker: monito/license-checker@x.y
+  node: circleci/node@x.y
+jobs:
+  check-production-licenses:
+    executor: node/default
+    steps:
+      - checkout
+      - node/install-packages
+      - license-checker/validate:
+          forbidden: "MIT;"
+workflows:
+  test:
+    jobs:
+      - check-production-licenses
