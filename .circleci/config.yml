@@ -1,7 +1,7 @@
 version: '2.1'
 orbs:
   license-checker: monito/license-checker@2.0.1
-  
+  node: circleci/node@5.1.0
 jobs:
   check-production-licenses:
     executor: node/default
