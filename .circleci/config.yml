@@ -8,8 +8,8 @@ jobs:
     steps:
       - checkout
       - node/install-packages
-      - license-checker/validate:
-          forbidden: "MIT;"
+      - license-checker/validate
+          
 workflows:
   test:
     jobs:
